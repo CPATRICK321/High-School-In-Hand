@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HSH</title>
+    <link rel="icon" id="favicon" type="image/png" href="00_logo.png">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script type="text/javascript" src="index.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="02_index.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="00_logo.png" alt="" href="01_index.html">
+          <a class="navbar-brand" href="01_index.html">HSH</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="03_about.html">ABOUT</a></li>
+            <li><a href="Statistics.html">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn" style="float:left;">SCHOOLS</button>
+              <div id="myDropdown" class="dropdown-content">
+                <table>
+                  <tr>
+                    <td><a href="carnahan.html">Carnahan High School of the Future</a></td>
+                    <td><a href="mckinley.html">McKinley CLA High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="central vpa.html">Central VPA High School</a></td>
+                    <td><a href="northwest.html">Northwest Law Academy</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="cleveland.html">Cleveland NJROTC</a></td>
+                    <td><a href="roosevelt.html">Roosevelt High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="clyde.html">Clyde C. Miller Career Academy</a></td>
+                    <td><a href="soldan.html">Soldan IS High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="collegiate.html">Collegiate School of Medicine & Bioscience</a></td>
+                    <td><a href="sumner.html">Sumner High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="gateway.html">Gateway STEM High School</a></td>
+                    <td><a href="vashon.html">Vashon High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="metro.html">Metro A&C High School</a></td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron text-center">
+      <h1>    <img src="00_logo2.png" alt="" class="logo2">   High School in Hand    <img src="00_logo2.png" alt="" class="logo2"></h1>
+      <p>Find the school that best fits you!</p>
+      <form>
+    </div>
+
+<table border="0px">
+  <tr>
+    <td>
+       <div class="jumbotron-survey">
+        <h1 class="display-3">Take the Survey   <i class="fas fa-edit"></i></h1>
+        <p class="lead">Find the SLPS High School that fits you best by taking our survey!</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="survey.html" role="button">Take The Survey!</a>
+        </p>
+      </div>
+    </td>
+    <td>
+       <div class="jumbotron-filter">
+        <h1 class="display-3">Browse Schools  <i class="fas fa-home"></i></h1>
+        <p class="lead">Go straight to the school list and use filters to choose the right school!</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="05_filters.html" role="button">Browse Schools!</a>
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+<footer class="page-footer blue center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="title">High School in Hand</h5>
+                <p>This website was made by James, Hollie, Tullaia, Chris, Grant, Clay, Akila, Rianna, Marlon and Everett</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="title">Contact Us</h5>
+                <ul>
+                    <li><a href="mailto:alex.schenk@slps.org">Alex Schenk</a> </li>
+                    <li><a href="mailto:monica.nickolai@slps.org">Monica Nickolai</a></li>
+                    <li><a href="http://www.slps.org">slps.org</a></li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+    <!--/.Copyright-->
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+</footer>
+
+  </body>
+</html>

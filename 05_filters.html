@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HSH</title>
+    <link rel="icon" id="favicon" type="image/png" href="00_logo.png">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script type="text/javascript" src="filters.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="06_filters.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="00_logo.png" alt="" href="01_index.html">
+          <a class="navbar-brand" href="01_index.html">HSH</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn" style="float:right;">SCHOOLS</button>
+              <div id="myDropdown" class="dropdown-content">
+                <table>
+                  <tr>
+                    <td><a href="carnahan.html">Carnahan High School of the Future</a></td>
+                    <td><a href="gateway.html">Gateway STEM High School</a></td>
+                    <td><a href="roosevelt.html">Roosevelt High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="central vpa.html">Central VPA High School</a></td>
+                    <td><a href="mckinley.html">McKinley CLA High School</a></td>
+                    <td><a href="soldan.html">Soldan IS High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="cleveland.html">Cleveland NJROTC</a></td>
+                    <td><a href="metro.html">Metro A&C High School</a></td>
+                    <td><a href="sumner.html">Sumner High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="clyde.html">Clyde C. Miller Career Academy</a></td>
+                    <td><a href="northwest.html">Northwest Law Academy</a></td>
+                    <td><a href="vashon.html">Vashon High School</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="collegiate.html">Collegiate School of Medicine & Bioscience</a></td>
+
+                  </tr>
+                </table>
+            </div>
+          </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+  <div class="jumbotron">
+  <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('cars')"> Small</button>
+  <button class="btn" onclick="filterSelection('medium')"> Medium</button>
+  <button class="btn" onclick="filterSelection('animals')"> Large</button>
+  <button class="btn" onclick="filterSelection('fruits')"> Sports</button>
+  <button class="btn" onclick="filterSelection('colors')"> Extra-Curricular</button>
+</div>
+
+<div class="container">
+  <div class="filterDiv cars fruits"><a href="Carnahan.html"  class="schools">Carnahan</a>  </div>
+  <div class="filterDiv cars fruits"><a href="Cleveland.html" class="schools">Cleveland</a>  </div>
+  <div class="filterDiv animals colors"><a href="Clyde.html"  class="schools">Clyde</a> </div>
+  <div class="filterDiv cars colors"><a href="Collegiate.html"  class="schools">Collegiate</a>  </div>
+  <div class="filterDiv medium colors"><a href="CVPA.html"  class="schools">CVPA</a>  </div>
+  <div class="filterDiv animals fruits"><a href="Gateway.html"  class="schools">Gateway</a>  </div>
+  <div class="filterDiv animals colors"><a href="McKinley.html" class="schools">McKinley</a> </div>
+  <div class="filterDiv colors cars"><a href="Metro.html" class="schools">Metro</a>  </div>
+  <div class="filterDiv cars fruits"><a href="Northwest.html" class="schools">Northwest</a>  </div>
+  <div class="filterDiv medium fruits"><a href="Roosevelt.html" class="schools">Roosevelt</a>  </div>
+  <div class="filterDiv animals colors"><a href="Soldan.html" class="schools">Soldan</a> </div>
+  <div class="filterDiv cars fruits"><a href="sumner.html" class="schools">Sumner</a>  </div>
+  <div class="filterDiv Animals fruits" ><a href="vashon.html" class="schools">Vashon</a></div>
+</div>
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<footer class="page-footer blue center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="title">Footer Content</h5>
+                <p>Here you can use rows and columns here to organize your footer content.</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="title">Contact Us</h5>
+                <ul>
+                    <li><a href="mailto:aschenk@csmb-stl.org">Alex Schenk</a> </li>
+                    <li><a href="mailto:mnickolai@csmb-stl.org">Monica Nickolai</a></li>
+                    <li>slps.org</li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+    <!--/.Copyright-->
+
+</footer>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
